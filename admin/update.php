@@ -109,6 +109,7 @@ if ($getVersions != '')
    }
  }
  rrmdir("../tmp");
+ rrmdir("../install");
  include("../config.php");
  $content='
  <?php
