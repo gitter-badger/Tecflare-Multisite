@@ -54,6 +54,7 @@ if ($result=mysqli_query($con,$sql))
     </tr>
     ';
   }
+  }
 mysqli_free_result($result);
 mysqli_close($con);
 ?>
