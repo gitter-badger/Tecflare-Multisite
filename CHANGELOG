@@ -10,9 +10,15 @@ Copyright (c) Tecflare Corporation All rights Reserved
 - Added new features to Secure File Manager
 
 ## [0.0.1] - 9/1/15
-## Changed
+### Changed
 
 - Improved Updating System
 - Added Server http://tecflare.cu.cc/multisite-update-packages/multisite-1.1.zip
 - Added Administration Area
 - Cleaned Some Code located in admin/functions
+
+## [Unreleased][unreleased]
+### Changed
+
+-Improved Security
+-Added port plocking

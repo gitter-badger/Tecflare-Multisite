@@ -1,9 +1,14 @@
 <?php
+include("functions/master.php");
 error_reporting(0);
 if (!isset($_POST["type"]))
 {
 include("functions/import.php");
 die();
+}
+if(!passwordcheck($_POST["password"]))
+{
+ header("Location: index.php?page=3&error=9")
 }
 //create account area
 include("../config.php");
@@ -27,7 +32,7 @@ name VARCHAR(99999),
 value TEXT
 )";
 $conn->query($sql);
-$sql = "INSERT INTO Administrators (id, usename, password) VALUES ('1', '" . $conn->real_escape_string($_POST["usename"])."', '" .md5($conn->real_escape_string($_POST["password"]))."')";
+$sql = "INSERT INTO Administrators (id, usename, password) VALUES ('1', '" . $conn->real_escape_string(addslashes($_POST["usename"]))."', '" .md5($conn->real_escape_string(addslashes($_POST["password"])))."')";
 $conn->query($sql);
 $sql = "INSERT INTO Settings (id, code, value) VALUES ('1', 'title','Multisite Central')";
 $conn->query($sql);

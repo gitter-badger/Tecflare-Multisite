@@ -7,10 +7,18 @@ include("functions/head.php");
 <h1>My Account</h1>
 </div>
 <?php
-if (isset($_GET["error"]))
+if (isset($_GET["error"]) && $_GET["error"] == 1)
 {
  ?>
  <div class="alert alert-success" role="alert">Account Updated Successfully.</div>
+ <?php
+}
+?>
+<?php
+if (isset($_GET["error"]) && $_GET["error"] == 2)
+{
+ ?>
+ <div class="alert alert-danger" role="alert">The password does not meet the requirements.<br> Password must contain a symbol, number, Uppercase letter,<br>and Lowercase letter.</div>
  <?php
 }
 ?>

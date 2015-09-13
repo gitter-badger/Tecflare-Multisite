@@ -115,6 +115,16 @@ elseif ($_GET["page"] == 3 && file_exists("../config.php"))
 </div>
 <div class="container">
     <p>
+        <?php
+        if ($_GET["error"] == 9)
+{
+  ?>
+ <div class="alert alert-danger" role="alert">
+  <strong>Error!</strong> Password must contain a symbol, Uppercase/Lowercase letter, and number.
+</div>
+<?php
+}
+?>
         Now we need to create you an admin account so you can use our system. Please make sure that you can remember the usename or password.
     </p>
     <form method="POST" action="import.php">
