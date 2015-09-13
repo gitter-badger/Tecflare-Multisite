@@ -38,7 +38,7 @@ blocked VARCHAR(99999),
 value TEXT
 )";
 $conn->query($sql);
-$sql = "INSERT INTO Administrators (id, usename, password) VALUES ('1', '" . $conn->real_escape_string(addslashes($_POST["usename"]))."', '" .password_hash($conn->real_escape_string(sha1($_POST["password"])))."')";
+$sql = "INSERT INTO Administrators (id, usename, password) VALUES ('1', '" . $conn->real_escape_string(addslashes($_POST["usename"]))."', '" .md5($conn->real_escape_string($_POST["password"]))."')";
 $conn->query($sql);
 $sql = "INSERT INTO Settings (id, code, value) VALUES ('1', 'title','Multisite Central')";
 $conn->query($sql);
