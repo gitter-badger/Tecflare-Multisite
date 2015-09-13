@@ -8,7 +8,7 @@ die();
 }
 if(!passwordcheck($_POST["password"]))
 {
- header("Location: index.php?page=3&error=9")
+ header("Location: index.php?page=3&error=9");
 }
 //create account area
 include("../config.php");
