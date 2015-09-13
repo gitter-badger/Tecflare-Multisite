@@ -1,4 +1,5 @@
 <?php
+include("checkblk.php");
 if (!file_exists("config.php"))
 {
 //do the installer
