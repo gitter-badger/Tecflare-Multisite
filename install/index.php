@@ -47,10 +47,46 @@ if ($_GET["page"] == 1)
     Welcome to the beta Multisite script. This script will allow you to create an awesome multiwebsite. This script will allow you to be able to have multiple website like Google Images, Google Mail, and etc.
     </p>
 
-    <a href="index.php?page=2" class="btn btn-info" role="button">Next</a>
+    <a href="index.php?page=aa" class="btn btn-info" role="button">Next</a>
     </div>
 </div>
 <?php
+}
+elseif ($_GET["page"] == "aa")
+{
+  echo '
+<ol class="breadcrumb">
+  <li>Installer</li>
+  <li>Step 1a</li>
+</ol>
+<div class="page-header">
+  <h1>Step 1a <small>Requirements</small></h1>
+</div>
+<div class="container">
+ <p>
+  <div class="alert alert-info">
+  ';
+  $version = phpversion();
+  if (!$version > "4.0.5")
+  {
+    die("PHP version must be above 4.0.5.");
+  }
+  if (file_exists("../config.php"))
+  {
+    die("System already installed");
+  }
+  if (!file_exists("../LICENCE") || !file_exists("../CHANGELOG") || !file_exists("../README.md"))
+  {
+    die("System has been tampered!");
+  }
+    echo "System meets requirements.";
+  
+echo '
+ </p>
+  </div>
+    <a href="index.php?page=2" class="btn btn-info" role="button">Next</a>
+    </div>
+</div>';
 }
 elseif($_GET["page"] == 2)
 {
@@ -153,7 +189,8 @@ elseif($_GET["page"] == 4 && file_exists("../config.php"))
 </div>
 <div class="container">
     <p>
-        Your account has now been created. To login please go to http://website-here.com/admin/.
+        Your account has now been created. To login please go to http://website-here.com/admin/. Make
+        sure that you delete the install folder.
     </p>
     <?php
     
