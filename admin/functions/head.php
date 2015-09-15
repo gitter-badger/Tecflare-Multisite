@@ -41,10 +41,7 @@
               <li><a href="update.php">Update</a></li>
               <li><a href="cloudfile.php">Storage</a></li>
               <li><a href="ipblock.php">Firewall</a></li>
-<<<<<<< HEAD
               <li><a href="bkup.php">Backup</a></li>
-=======
->>>>>>> 4d78b6bf80a069e9a6554e976a6de528ffe2d9d7
               <li><a href="account.php">My Account</a></li>
             
             </ul>
