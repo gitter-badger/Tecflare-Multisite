@@ -1,5 +1,7 @@
 # Tecflare Multisite
 
+[![Join the chat at https://gitter.im/dodiaraculus17/Tecflare-Multisite](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dodiaraculus17/Tecflare-Multisite?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Tecflare Multisite is a professional webpage system like wordpress.
 
   - Easy
